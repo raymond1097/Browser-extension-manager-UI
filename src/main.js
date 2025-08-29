@@ -20,7 +20,7 @@ function renderCards(data) {
         </div>
       </div>
       <div class="flex-1"></div>
-      
+
       <div class="flex items-center justify-between mt-4">
         <button class="bg-neutral-50 dark:bg-neutral-700 text-neutral-900 dark:text-neutral-50 px-4 py-1 border rounded-full font-medium hover:text-gray-100 dark:hover:text-gray-700 hover:bg-red-500 focus:ring-2 focus:outline-none focus:ring-red-500 cursor-pointer">Remove</button>
 
@@ -91,22 +91,22 @@ let isDark = localStorage.getItem('theme') === 'dark'
 // This will apply saved theme on page load
 if (isDark) {
   document.documentElement.classList.add('dark')
-  themeIcon.src = "images/icon-sun.svg"
+  themeIcon.src = "/images/icon-sun.svg"
 } else {
   document.documentElement.classList.remove('dark')
-  themeIcon.src = "images/icon-moon.svg"
+  themeIcon.src = "/images/icon-moon.svg"
 }
 
 themeToggleBtn.addEventListener('click', () => {
   isDark = !isDark
   if (isDark) {
     // Switch to dark
-    themeIcon.src = "images/icon-sun.svg"
+    themeIcon.src = "/images/icon-sun.svg"
     document.documentElement.classList.add('dark') //This refers to the root HTML element of the page.
     localStorage.setItem('theme', 'dark')
   } else {
     // Switch to light
-    themeIcon.src = "images/icon-moon.svg"
+    themeIcon.src = "/images/icon-moon.svg"
     document.documentElement.classList.remove('dark')
     localStorage.setItem('theme', 'light')
   }
